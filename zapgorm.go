@@ -1,4 +1,4 @@
-package zapgorm
+package zapgorm // import "moul.io/zapgorm"
 
 import (
 	"time"
