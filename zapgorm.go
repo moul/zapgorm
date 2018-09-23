@@ -14,7 +14,7 @@ func New(logger *zap.Logger) Logger {
 	return Logger{zap: logger}
 }
 
-func (l *Logger) Print(values ...interface{}) {
+func (l Logger) Print(values ...interface{}) {
 	if len(values) < 2 {
 		return
 	}
