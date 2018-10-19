@@ -1,4 +1,7 @@
 # zapgorm
+
+[![GuardRails badge](https://badges.production.guardrails.io/moul/zapgorm.svg)](https://www.guardrails.io)
+
 zap logger for gorm
 
 ## Usage
