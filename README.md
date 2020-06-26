@@ -1,17 +1,10 @@
 # zapgorm
-zap logger for gorm 1 and gorm 2
 
-## Usage with gorm 2
+Zap logging driver for gorm 1.
 
-```go
-import "moul.io/zapgorm/zapgorm2"
+If you're using gorm v2, please go to https://github.com/moul/zapgorm2
 
-logger := zapgorm2.New(zap.L())
-logger.SetAsDefault() // optional: configure gorm to use this zapgorm.Logger for callbacks
-db, err = gorm.Open(sqlite.Open("./db.sqlite"), &gorm.Config{Logger: logger})
-```
-
-## Usage with gorm 1
+## Usage
 
 ```go
 import "moul.io/zapgorm"
