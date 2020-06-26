@@ -1,7 +1,17 @@
 # zapgorm
-zap logger for gorm
+zap logger for gorm 1 and gorm 2
 
-## Usage
+## Usage with gorm 2
+
+```go
+import "moul.io/zapgorm/zapgorm2"
+
+logger := zapgorm2.New(zap.L())
+logger.SetAsDefault() // optional: configure gorm to use this zapgorm.Logger for callbacks
+db, err = gorm.Open(sqlite.Open("./db.sqlite"), &gorm.Config{Logger: logger})
+```
+
+## Usage with gorm 1
 
 ```go
 import "moul.io/zapgorm"
