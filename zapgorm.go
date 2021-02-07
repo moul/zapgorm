@@ -24,7 +24,7 @@ func (l Logger) Print(values ...interface{}) {
 		l.zap.Debug("gorm.debug.sql",
 			zap.String("query", values[3].(string)),
 			zap.Any("values", values[4]),
-			zap.Duration("duration", values[2].(time.Duration)),
+			zap.Float64("duration in ms", float64(values[2].(time.Duration))/float64(time.Millisecond)),
 			zap.Int64("affected-rows", values[5].(int64)),
 			zap.String("source", values[1].(string)), // if AddCallerSkip(6) is well defined, we can safely remove this field
 		)
